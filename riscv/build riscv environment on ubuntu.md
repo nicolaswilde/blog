@@ -25,7 +25,7 @@ One submodule 'boringssl' is stored on google server, need VPN to clone it from 
 
     INSTALL_PATH='/opt/riscv'
     export PATH=$PATH:$INSTALL_PATH/BIN
-    ./configure --prefix=$INSTALL_PATH
+    ./configure --prefix=$INSTALL_PATH (can use --with-arch=rv32i to build riscv32-unknown-elf- toolchain)
     sudo make
 
 ## path
