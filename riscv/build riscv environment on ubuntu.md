@@ -45,7 +45,7 @@ open terminal in /riscv-tools/riscv-isa-sim
     apt-get install device-tree-compiler
     mkdir build
     cd build
-    ../configure --prefix=$RISCV
+    ../configure --prefix=$RISCV --enable-commitlog
     make
     sudo make install
 
