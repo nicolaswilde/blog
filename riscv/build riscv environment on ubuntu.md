@@ -66,3 +66,5 @@ print "hello world" means success!!!
 # reference
 
 https://blog.csdn.net/shensen0304/article/details/95504258
+
+https://github.com/ucb-bar/riscv-sodor
