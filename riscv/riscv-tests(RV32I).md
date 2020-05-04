@@ -19,6 +19,10 @@ test mm, mt-vvadd, and mt-matmul will cause error using riscv32-unknown-elf- too
 
     spike --isa=RV32I dhrystone.riscv
 
+# get trace
+
+    spike -l --isa=RV32I  dhrystone.riscv 2> spike.log
+
 # Reference
 
 https://github.com/ucb-bar/riscv-sodor
