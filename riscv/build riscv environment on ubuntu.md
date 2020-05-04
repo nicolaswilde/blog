@@ -32,10 +32,36 @@ One submodule 'boringssl' is stored on google server, need VPN to clone it from 
 
     sudo gedit ~/.bashrc
     export PATH=/opt/riscv/bin:$PATH
+    export RISCV=/opt/riscv
 
 then you can test:
 
     riscv64-unknown-elf-gcc -o hello hello.c
+
+# spike & pk
+
+open terminal in /riscv-tools/riscv-isa-sim
+
+    apt-get install device-tree-compiler
+    mkdir build
+    cd build
+    ../configure --prefix=$RISCV
+    make
+    sudo make install
+
+open terminal in /riscv-tools/riscv-pk
+
+    mkdir build
+    cd build
+    ../configure --prefix=$RISCV --host=riscv64-unknown-elf
+    make
+    make install
+
+then you can test:
+
+    spike pk hello
+
+print "hello world" means success!!!
 
 # reference
 
